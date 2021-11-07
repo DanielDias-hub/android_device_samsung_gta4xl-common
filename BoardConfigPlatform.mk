@@ -15,7 +15,7 @@
 
 BUILD_TOP := $(shell pwd)
 
-PLATFORM_PATH := device/samsung/gta4xl-common
+PLATFORM_PATH := device/samsung/m21-common
 
 ### BOARD
 TARGET_BOARD_PLATFORM := universal9611
@@ -54,7 +54,7 @@ OVERRIDE_RS_DRIVER := libRSDriverArm.so
 TARGET_SPECIFIC_HEADER_PATH := $(PLATFORM_PATH)/hardware/include
 
 ### KERNEL
-TARGET_KERNEL_SOURCE = kernel/samsung/gta4xl/
+TARGET_KERNEL_SOURCE = kernel/samsung/m21/
 TARGET_KERNEL_CLANG_COMPILE := true
 
 BOARD_CUSTOM_BOOTIMG         := true
