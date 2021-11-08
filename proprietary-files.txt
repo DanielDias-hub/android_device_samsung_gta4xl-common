@@ -1,64 +1,337 @@
-# Common proprietary files - from Samsung package version P610XXU2BTJ5, unless pinned
+### ARGOS
+vendor/bin/argosd
+
+### AUDIO
+vendor/etc/dolby/dax-default.xml
+vendor/lib/hw/audio.primary.exynos9611.so
+vendor/lib/vndk/libtinyalsa.so
+vendor/lib/vndk/libaudioroute.so
+vendor/lib/libsamsungDiamondVoice.so
+vendor/lib/libSamsungPostProcessConvertor.so
+vendor/lib/lib_SamsungRec_07002.so
+vendor/lib/lib_SoundAlive_SRC384_ver320.so
+vendor/lib/lib_soundaliveresampler.so
+vendor/lib/libaboxpcmdump.so
+vendor/lib/libalsautils_sec.so
+vendor/lib/libaudio_soundtrigger.so
+vendor/lib/libaudioproxy.so
+vendor/lib/libdatamod.so
+vendor/lib/libfloatingfeature.so
+vendor/lib/librecordalive.so
+vendor/lib/libsecaudioinfo.so
+vendor/lib/libprofileparamstorage.so
+vendor/lib/libsecaudiocoreutils.so
+vendor/lib/lib_SoundBooster_ver1000.so
+vendor/lib/soundfx/libaudioeffectoffload.so
+vendor/lib/soundfx/libsamsungSoundbooster_plus.so
+vendor/lib/soundfx/libswdap.so
+vendor/lib64/libfloatingfeature.so
+vendor/lib64/libsecaudioinfo.so
+vendor/lib64/lib_SoundBooster_ver1000.so
+vendor/lib64/soundfx/libaudioeffectoffload.so
+vendor/lib64/soundfx/libsamsungSoundbooster_plus.so
+vendor/lib64/soundfx/libswdap.so
+
+### AUDIO_FIRMWARE
+vendor/etc/APDV_Params.bin
+vendor/firmware/AP_AUDIO_SLSI.bin
+vendor/firmware/APBargeIn_AUDIO_SLSI.bin
+vendor/firmware/APBiBF_AUDIO_SLSI.bin
+vendor/firmware/calliope_dram.bin
+vendor/firmware/calliope_iva.bin
+vendor/firmware/calliope_sram.bin
+vendor/firmware/dax_param.bin
+vendor/firmware/SoundBoosterParam.bin
+
+### BIOMETRICS_FINGERPRINT
+vendor/lib/libbauthserver.so
+vendor/lib/libbauthtzcommon.so
+vendor/lib/libegis_fp_normal_sensor_test.so
+vendor/lib/libgf_in_system_lib.so
+vendor/lib/libqfp_sensortest.so
+vendor/lib/libsynaFpSensorTestNwd.so
+vendor/lib64/libbauthserver.so
+vendor/lib64/libbauthtzcommon.so
+vendor/lib64/libegis_fp_normal_sensor_test.so
+vendor/lib64/libgf_in_system_lib.so
+vendor/lib64/libqfp_sensortest.so
+vendor/lib64/libsynaFpSensorTestNwd.so
 
 ### BLUETOOTH
-# Bluetooth (aptX) - from crosshatch - QP1A.190711.020
-product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
+system/lib64/libaptX_encoder.so
 
-### CAMERA
-system/lib/libcamerahardwareinterface.so
-# Copyied by vendor_init which needs read access
+# CAMERA_DEPENDENCIES
+vendor/lib/libSEF.quram.so
+vendor/lib/libacryl.so
+vendor/lib/libacryl_plugin_slsi_hdr10.so
+vendor/lib/libcsc.so
+vendor/lib/libgiantmscl.so
+vendor/lib/libhwjpeg.so
+vendor/lib/libsensorlistener.so
+vendor/lib/libstagefrighthw.so
+vendor/lib/libuniapi.so
+vendor/lib/libuniplugin.so
+vendor/lib64/libSEF.quram.so
+vendor/lib64/libcsc.so
+vendor/lib64/libgiantmscl.so
+vendor/lib64/libhwjpeg.so
+vendor/lib64/libsensorlistener.so
+vendor/lib64/libstagefrighthw.so
+vendor/lib64/libuniapi.so
+vendor/lib64/libuniplugin.so
+
+# Remosaic Daemon
+vendor/lib/libremosaic_daemon.so
+vendor/lib64/libremosaic_daemon.so
+vendor/lib64/libremosaiclib_s5kgm2.so
+
+### CAMERA_FIRMWARE
+vendor/firmware/dual_cal_wide_sub.bin
+# Copied by vendor_init which needs read access
 system/media/fruc_kernels.exynos9610.bin:vendor/firmware/fruc_kernels.exynos9610.bin
 
+### CHARGER_FIRMWARE
+vendor/firmware/mfc_fw.bin
+
+# CODECS
+vendor/etc/media_codecs.xml
+vendor/etc/media_codecs_performance.xml
+vendor/etc/media_profiles_V1_0.xml
+
+# GATEKEEPER
+vendor/lib/hw/gatekeeper.exynos9611.so
+vendor/lib64/hw/gatekeeper.exynos9611.so
+
+### GPS/GNSS
+vendor/bin/hw/vendor.samsung.hardware.gnss@2.0-service
+vendor/etc/init/vendor.samsung.hardware.gnss@2.0-service.rc
+vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
+
+# GRALLOC
+vendor/lib/hw/gralloc.exynos9611.so
+vendor/lib64/hw/gralloc.exynos9611.so
+
+# GRAPICS_MALI
+vendor/lib/egl/libGLES_mali.so
+vendor/lib64/egl/libGLES_mali.so
+
+# ION
+vendor/lib/libion_exynos.so
+vendor/lib64/libion_exynos.so
+
+# KEYMASTER
+vendor/lib64/libkeymaster_helper.so
+-vendor/lib64/libskeymaster4device.so
+
 ### OMX
-system/etc/somxreg.conf
-# FIXME: Check if these can be built from source
-system/lib/libsomx263dsw.so
-system/lib/libsomx264dsw.so
-system/lib/libsomxaacd.so
-system/lib/libsomxadpcmd.so
-system/lib/libsomxamrd.so
-system/lib/libsomxcmn.so
-system/lib/libsomxcore.so
-system/lib/libsomxflacd.so
-system/lib/libsomxhevcdsw.so
-system/lib/libsomxmp3d.so
-system/lib/libsomxmp4vdsw.so
-system/lib/libsomxmp43d.so
-system/lib/libsomxnaace.so
-system/lib/libsomxvc1dsw.so
-system/lib/libsomxvp8d.so
-system/lib/libsomxwmad.so
-system/lib/libsomxwmv7d.so
-system/lib/libsomxwmv8d.so
-system/lib64/libsomx263dsw.so
-system/lib64/libsomx264dsw.so
-system/lib64/libsomxaacd.so
-system/lib64/libsomxadpcmd.so
-system/lib64/libsomxamrd.so
-system/lib64/libsomxcmn.so
-system/lib64/libsomxcore.so
-system/lib64/libsomxflacd.so
-system/lib64/libsomxhevcdsw.so
-system/lib64/libsomxmp3d.so
-system/lib64/libsomxmp4vdsw.so
-system/lib64/libsomxmp43d.so
-system/lib64/libsomxnaace.so
-system/lib64/libsomxvc1dsw.so
-system/lib64/libsomxvp8d.so
-system/lib64/libsomxwmad.so
-system/lib64/libsomxwmv7d.so
-system/lib64/libsomxwmv8d.so
-# FIXME END
+vendor/lib/libepicoperator.so
+vendor/lib/libExynosOMX_Core.so
+vendor/lib/libExynosOMX_Resourcemanager.so
+vendor/lib/omx/libOMX.Exynos.AVC.Decoder.so
+vendor/lib/omx/libOMX.Exynos.AVC.Encoder.so
+vendor/lib/omx/libOMX.Exynos.HEVC.Decoder.so
+vendor/lib/omx/libOMX.Exynos.HEVC.Encoder.so
+vendor/lib/omx/libOMX.Exynos.MPEG4.Decoder.so
+vendor/lib/omx/libOMX.Exynos.MPEG4.Encoder.so
+vendor/lib/omx/libOMX.Exynos.VP8.Decoder.so
+vendor/lib/omx/libOMX.Exynos.VP8.Encoder.so
+vendor/lib/omx/libOMX.Exynos.VP9.Decoder.so
+vendor/lib/omx/libOMX.Exynos.VP9.Encoder.so
+vendor/lib/omx/libOMX.Exynos.WMV.Decoder.so
+vendor/lib64/libepicoperator.so
+vendor/lib64/libExynosOMX_Core.so
+vendor/lib64/libExynosOMX_Resourcemanager.so
+vendor/lib64/omx/libOMX.Exynos.AVC.Decoder.so
+vendor/lib64/omx/libOMX.Exynos.AVC.Encoder.so
+vendor/lib64/omx/libOMX.Exynos.HEVC.Decoder.so
+vendor/lib64/omx/libOMX.Exynos.HEVC.Encoder.so
+vendor/lib64/omx/libOMX.Exynos.MPEG4.Decoder.so
+vendor/lib64/omx/libOMX.Exynos.MPEG4.Encoder.so
+vendor/lib64/omx/libOMX.Exynos.VP8.Decoder.so
+vendor/lib64/omx/libOMX.Exynos.VP8.Encoder.so
+vendor/lib64/omx/libOMX.Exynos.VP9.Decoder.so
+vendor/lib64/omx/libOMX.Exynos.VP9.Encoder.so
+vendor/lib64/omx/libOMX.Exynos.WMV.Decoder.so
+
+### OMX_FIRMWARE
+vendor/firmware/fimc_is_lib.bin
+vendor/firmware/fimc_is_rta.bin
+
+### SECNATIVE
+vendor/lib/libsecnativefeature.so
+vendor/lib64/libsecnativefeature.so
+
+### TEEGRIS
+vendor/bin/tzdaemon
+vendor/bin/tzts_daemon
+vendor/etc/init/teegris_v3.rc
+vendor/lib/libuuid.so
+vendor/lib/libteecl.so
+vendor/lib64/libiwt.so
+vendor/lib64/libteecl.so
+vendor/lib64/libuuid.so
+
+# TEEGRIS_FIRMWARE
+vendor/tee/00000000-0000-0000-0000-000000010081
+vendor/tee/00000000-0000-0000-0000-4b45594d5354
+vendor/tee/00000000-0000-0000-0000-000000020081  
+vendor/tee/00000000-0000-0000-0000-505256544545
+vendor/tee/00000000-0000-0000-0000-000000534b4d  
+vendor/tee/00000000-0000-0000-0000-564c544b5052
+vendor/tee/00000000-0000-0000-0000-00535453540c  
+vendor/tee/00000000-0000-0000-0000-656e676d6f64
+vendor/tee/00000000-0000-0000-0000-00575644524d  
+vendor/tee/00000000-0000-0000-0000-6d73745f5441
+vendor/tee/00000000-0000-0000-0000-46494e474552  
+vendor/tee/00000000-0000-0000-0000-474154454b45  
+vendor/tee/driver/00000000-0000-0000-0000-00535453540b
+vendor/tee/driver/00000000-0000-0000-0000-4d53546d7374
+vendor/tee/driver/00000000-0000-0000-0000-564c544b4456
+vendor/tee/tui/resolution_common/ID00000100
 
 ### SAMSUNG_SLSI_CONFIGSTORE
-system/lib/vendor.samsung_slsi.hardware.configstore-utils.so
-system/lib/vendor.samsung_slsi.hardware.configstore@1.0.so
-system/lib64/vendor.samsung_slsi.hardware.configstore-utils.so
-system/lib64/vendor.samsung_slsi.hardware.configstore@1.0.so
+vendor/bin/hw/vendor.samsung_slsi.hardware.configstore@1.0-service
+vendor/etc/init/vendor.samsung_slsi.hardware.configstore@1.0-service.rc
+vendor/lib64/vendor.samsung_slsi.hardware.configstore@1.0.so
 
 ### SAMSUNG_SLSI_HWC
-system/lib/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
-system/lib64/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
+vendor/bin/hw/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service
+vendor/etc/init/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service.rc
+vendor/lib64/hw/hwcomposer.exynos9611.so
+vendor/lib/libExynosHWCService.so
+vendor/lib/libGrallocWrapper.so
+vendor/lib/libexynosdisplay.so
+vendor/lib/libexynosgraphicbuffer.so
+vendor/lib/libexynosgscaler.so
+vendor/lib/libexynosscaler.so
+vendor/lib/libexynosutils.so
+vendor/lib/libexynosv4l2.so
+vendor/lib/hw/hwcomposer.exynos9611.so
+vendor/lib64/libExynosHWCService.so
+vendor/lib64/libGrallocWrapper.so
+vendor/lib64/libacryl.so
+vendor/lib64/libacryl_plugin_slsi_hdr10.so
+vendor/lib64/libexynosdisplay.so
+vendor/lib64/libexynosgraphicbuffer.so
+vendor/lib64/libexynosgscaler.so
+vendor/lib64/libexynosscaler.so
+vendor/lib64/libexynosutils.so
+vendor/lib64/libexynosv4l2.so
+vendor/lib64/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
 
-### WIDEVINE
-system/lib64/vendor.samsung.hardware.security.widevine.keyprovisioning@1.0.so
+### SAMSUNG_SLSI_MEMTRACK
+vendor/lib64/hw/memtrack.exynos9611.so
+vendor/lib/hw/memtrack.exynos9611.so
+
+### SAMSUNG_SLSI_FIRMWARE
+vendor/firmware/CC_DRAM_CODE_FLASH.bin
+vendor/firmware/CC_DTCM_CODE_FLASH.bin
+vendor/firmware/CC_ITCM_CODE_FLASH.bin
+vendor/firmware/rtdsp.bin
+vendor/firmware/rtdsp_param.bin
+vendor/firmware/setfile_hi2021q.bin
+vendor/firmware/setfile_gc5035.bin
+vendor/firmware/setfile_gm2.bin
+vendor/firmware/kernel_bin_enf.bin
+vendor/firmware/kernel_bin_inception.bin
+vendor/firmware/kernel_bin_mfb.bin
+vendor/firmware/kernel_bin_mobile_vgg.bin
+vendor/firmware/kernel_bin_nfd.bin
+vendor/firmware/setfile_4ha.bin
+
+### SENSORS
+vendor/etc/sensors/hals.conf
+vendor/lib/hw/sensors.sensorhub.so
+vendor/lib/sensors.grip.so
+vendor/lib64/hw/sensors.sensorhub.so
+vendor/lib64/sensors.grip.so
+
+### VIBRATOR
+vendor/etc/init/vendor.samsung.hardware.vibrator@2.2-service.rc
+vendor/bin/hw/vendor.samsung.hardware.vibrator@2.2-service
+vendor/lib64/vendor.samsung.hardware.vibrator@2.0.so
+vendor/lib64/vendor.samsung.hardware.vibrator@2.1.so
+vendor/lib64/vendor.samsung.hardware.vibrator@2.2.so
+
+# WIDEVINE #
+vendor/bin/hw/android.hardware.drm@1.3-service.widevine
+vendor/bin/vendor.samsung.hardware.security.widevine.keyprov@1.0-service
+vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
+vendor/etc/init/vendor.samsung.hardware.security.widevine.keyprov@1.0-service.rc
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
+vendor/lib/liboemcrypto.so
+vendor/lib/libwvhidl.so
+vendor/lib/mediadrm/libwvdrmengine.so
+vendor/lib64/vendor.samsung.hardware.security.widevine.keyprov@1.0.so
+
+### WIFI
+system/bin/wlandutservice
+vendor/bin/hw/macloader
+vendor/bin/hw/mfgloader
+vendor/bin/wlbtd
+vendor/etc/init/wifi.rc
+vendor/etc/init/wifi_slsi.rc
+vendor/etc/wifi/hydra_config.sdb
+vendor/etc/wifi/indoorchannel.info
+vendor/etc/wifi/mx140.bin
+vendor/etc/wifi/mx140_t.bin
+vendor/etc/wifi/mx140_t_wlan.hcf
+vendor/etc/wifi/mx140_t_wlan_sw.hcf
+vendor/etc/wifi/mx140_t_wlan_t.hcf
+vendor/etc/wifi/mx140_t_wlan_t_sw.hcf
+vendor/etc/wifi/mx140_wlan.hcf
+vendor/etc/wifi/mx140_wlan_sw.hcf
+vendor/etc/wifi/mx140_wlan_t.hcf
+vendor/etc/wifi/mx140_wlan_t_sw.hcf
+vendor/etc/wifi/platform.txt
+vendor/etc/wifi/slsi_reg_database.bin
+vendor/etc/wifi/mx140/debug/common/log-strings.bin
+vendor/etc/wifi/mx140/debug/hardware/moredump/cortexR7.xml
+vendor/etc/wifi/mx140/debug/hardware/moredump/mb_cp2wlbt_registers.xml
+vendor/etc/wifi/mx140/debug/hardware/moredump/mb_wlbt2gnss_registers.xml
+vendor/etc/wifi/mx140/debug/hardware/moredump/periph_gic_registers.xml
+vendor/etc/wifi/mx140/debug/hardware/moredump/peri_registers.xml
+vendor/etc/wifi/mx140/debug/hardware/moredump/mb_ap2wlbt_registers.xml
+vendor/etc/wifi/mx140/debug/hardware/moredump/mb_shub2wlbt_registers.xml
+vendor/etc/wifi/mx140/debug/hardware/moredump/moredump.bin
+vendor/etc/wifi/mx140/debug/hardware/moredump/periph_int_ifc_registers.xml
+vendor/etc/wifi/mx140/debug/hardware/moredump/pmu_conf_registers.xml
+vendor/etc/wifi/mx140/debug/hardware/moredump/mb_apm2wlbt_registers.xml
+vendor/etc/wifi/mx140/debug/hardware/moredump/mb_wlbt2abox_registers.xml
+vendor/etc/wifi/mx140/debug/hardware/moredump/moredump.xml
+vendor/etc/wifi/mx140/debug/hardware/moredump/periph_scu_registers.xml
+vendor/etc/wifi/mx140/debug/hardware/moredump/rf_chip_registers.xml
+vendor/etc/wifi/mx140/debug/wlan/hip_signals.xml
+vendor/etc/wifi/mx140/debug/wlan/hydra_config.sdb
+vendor/etc/wifi/mx140/debug/wlan/id.txt
+vendor/etc/wifi/mx140/debug/wlan/mib_out.xml
+vendor/etc/wifi/mx140/debug/wlan/symbols.dbg
+vendor/etc/wifi/mx140/debug/wlan/unicli.dbg
+vendor/etc/wifi/mx140/debug/wlan/unitab.dbg
+vendor/etc/wifi/mx140/debug/wlan/univif.dbg
+vendor/etc/wifi/mx140/debug/wlan/xide_mib.dbg
+vendor/etc/wifi/mx140_t/debug/common/log-strings.bin
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/cortexR7.xml
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/mb_cp2wlbt_registers.xml
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/mb_wlbt2gnss_registers.xml
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/periph_gic_registers.xml
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/peri_registers.xml
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/mb_ap2wlbt_registers.xml
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/mb_shub2wlbt_registers.xml
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/moredump.bin
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/periph_int_ifc_registers.xml
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/pmu_conf_registers.xml
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/mb_apm2wlbt_registers.xml
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/mb_wlbt2abox_registers.xml
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/moredump.xml
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/periph_scu_registers.xml
+vendor/etc/wifi/mx140_t/debug/hardware/moredump/rf_chip_registers.xml
+vendor/etc/wifi/mx140_t/debug/wlan/hip_signals.xml
+vendor/etc/wifi/mx140_t/debug/wlan/hydra_config.sdb
+vendor/etc/wifi/mx140_t/debug/wlan/id.txt
+vendor/etc/wifi/mx140_t/debug/wlan/mib_out.xml
+vendor/etc/wifi/mx140_t/debug/wlan/symbols.dbg
+vendor/etc/wifi/mx140_t/debug/wlan/unicli.dbg
+vendor/etc/wifi/mx140_t/debug/wlan/unitab.dbg
+vendor/etc/wifi/mx140_t/debug/wlan/univif.dbg
+vendor/etc/wifi/mx140_t/debug/wlan/xide_mib.dbg
